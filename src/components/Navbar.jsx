@@ -16,7 +16,7 @@ const Navbar = () => {
           <li
             key={nav.id}
             className={`font-poppins font-normal cursor-pointer text-[16px] ${
-              active === nav.title ? "text-white" : "text-dimWhite"
+              active === nav.title ? "text-white border-solid border-2 border-slate-500 hover:border-dotted px-2 rounded-xl" : "text-dimWhite"
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >
@@ -25,7 +25,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="sm:hidden  flex flex-1 justify-end items-center">
         <img
           src={toggle ? close : menu}
           alt="menu"
@@ -43,7 +43,7 @@ const Navbar = () => {
               <li
                 key={nav.id}
                 className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-white" : "text-dimWhite"
+                  active === nav.title ? "text-white border-solid border-2 border-slate-500 hover:border-dotted    rounded-xl" : "text-dimWhite"
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => setActive(nav.title)}
               >
